@@ -4,8 +4,12 @@ import java.util.*;
 
 public class Graphe<E> {
 
-    List <Noeud<E>> listNoeuds = new ArrayList<>();
-    Map<AbstractMap.SimpleEntry<Noeud<E>, Noeud<E>>, Double> aretes = new HashMap<>();
+    private List <Noeud<E>> listNoeuds = new ArrayList<>();
+    private Map<AbstractMap.SimpleEntry<Noeud<E>, Noeud<E>>, Double> aretes = new HashMap<>();
+
+    public List<Noeud<E>> getListNoeuds() {
+        return listNoeuds;
+    }
 
     public void ajouterNoeud(Noeud<E> noeud){
         if (!listNoeuds.contains(noeud))
