@@ -124,10 +124,7 @@ public class CarteGUI extends JFrame {
 		if (caseDepart != null && caseArrivee != null) {
 			Chemin chemin = algorithme.trouverChemin(carte, caseDepart.getX(), caseDepart.getY(), caseArrivee.getX(),
 					caseArrivee.getY());
-			System.out.println("Chemin le plus court :");
-			for (Case c : chemin.getCases()) {
-				System.out.println("[" + c.getX() + ", " + c.getY() + "]");
-			}
+			chemin.afficherChemin();
 		}
 	}
 
