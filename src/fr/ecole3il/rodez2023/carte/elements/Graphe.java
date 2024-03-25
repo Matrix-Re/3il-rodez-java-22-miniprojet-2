@@ -7,10 +7,6 @@ public class Graphe<E> {
     private List <Noeud<E>> listNoeuds = new ArrayList<>();
     private Map<AbstractMap.SimpleEntry<Noeud<E>, Noeud<E>>, Double> aretes = new HashMap<>();
 
-    public List<Noeud<E>> getListNoeuds() {
-        return listNoeuds;
-    }
-
     public void ajouterNoeud(Noeud<E> noeud){
         if (!listNoeuds.contains(noeud))
             listNoeuds.add(noeud);
@@ -32,5 +28,15 @@ public class Graphe<E> {
 
     public List<Noeud<E>> getVoisins(Noeud<E> noeud){
         return noeud.getVoisins();
+    }
+
+    public Noeud<E> getNoeud(int x, int y) {
+        for (Noeud<E> noeud : listNoeuds) {
+            Case caseActuelle = (Case) noeud.getValeur();
+            if (caseActuelle.getX() == x && caseActuelle.getY() == y) {
+                return noeud;
+            }
+        }
+        return null;
     }
 }

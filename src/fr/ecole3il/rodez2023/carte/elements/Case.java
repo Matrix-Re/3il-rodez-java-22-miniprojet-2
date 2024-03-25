@@ -1,5 +1,7 @@
 package fr.ecole3il.rodez2023.carte.elements;
 
+import java.util.Objects;
+
 /**
  * La classe Case représente une case sur une carte, caractérisée par une tuile et des coordonnées (x, y).
  * Elle permet de conserver la position (x, y) d'une tuile sur une carte.
@@ -52,5 +54,15 @@ public class Case {
     @Override
     public String toString() {
         return "Case [tuile=" + tuile + ", x=" + x + ", y=" + y + "]";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        Case other = (Case) obj;
+        return x == other.x && y == other.y && Objects.equals(tuile, other.tuile);
     }
 }
