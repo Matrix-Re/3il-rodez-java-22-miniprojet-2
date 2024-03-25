@@ -14,6 +14,11 @@ public class AlgorithmeDijkstra<E> implements AlgorithmeChemin<E> {
 
     @Override
     public List<Noeud<E>> trouverChemin(Graphe<E> graphe, Noeud<E> depart, Noeud<E> arrivee) {
+        // On vérifie que les noeuds de départ et d'arrivée sont bien dans le graphe
+        if (!graphe.getNoeuds().contains(depart) || !graphe.getNoeuds().contains(arrivee)) {
+            return new ArrayList<>();
+        }
+
         Map<Noeud<E>, Double> couts = new HashMap<>();
         Map<Noeud<E>, Noeud<E>> predecesseurs = new HashMap<>();
         Set<Noeud<E>> noeudsVisites = new HashSet<>();
