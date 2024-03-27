@@ -1,7 +1,8 @@
 package fr.ecole3il.rodez2023.carte.test;
 
 import fr.ecole3il.rodez2023.carte.chemin.algorithmes.AlgorithmeAEtoile;
-import fr.ecole3il.rodez2023.carte.elements.*;
+import fr.ecole3il.rodez2023.carte.chemin.elements.Graphe;
+import fr.ecole3il.rodez2023.carte.chemin.elements.Noeud;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,7 +1,7 @@
 package fr.ecole3il.rodez2023.carte.test;
 
-import fr.ecole3il.rodez2023.carte.elements.Graphe;
-import fr.ecole3il.rodez2023.carte.elements.Noeud;
+import fr.ecole3il.rodez2023.carte.chemin.elements.Graphe;
+import fr.ecole3il.rodez2023.carte.chemin.elements.Noeud;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

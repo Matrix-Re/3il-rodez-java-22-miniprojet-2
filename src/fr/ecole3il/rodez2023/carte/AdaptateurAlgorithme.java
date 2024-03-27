@@ -1,6 +1,8 @@
 package fr.ecole3il.rodez2023.carte;
 
 import fr.ecole3il.rodez2023.carte.chemin.algorithmes.AlgorithmeChemin;
+import fr.ecole3il.rodez2023.carte.chemin.elements.Graphe;
+import fr.ecole3il.rodez2023.carte.chemin.elements.Noeud;
 import fr.ecole3il.rodez2023.carte.elements.*;
 
 import java.util.ArrayList;
