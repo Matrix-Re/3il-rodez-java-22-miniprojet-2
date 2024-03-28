@@ -10,10 +10,6 @@ import fr.ecole3il.rodez2023.carte.manipulateurs.GenerateurCarte;
 
 /**
  * @author p.roquart
- * genre on peut tester le code
- * c'est agaçant tous ces tests
- * 
- * de toute façon quand ça compile c'est bon
  */
 public class ExempleCLI {
 

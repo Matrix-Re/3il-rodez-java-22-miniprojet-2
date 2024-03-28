@@ -22,11 +22,6 @@ import java.io.IOException;
 
 /**
  * @author p.roquart
- * voilà
- * donc
- * c'est la classe finale pour le gui quoi
- * enfin je sais pas
- * moi j'aime pas le java
  */
 public class CarteGUI extends JFrame {
 	private Carte carte;
@@ -142,13 +137,8 @@ public class CarteGUI extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		// Créer une carte de test
-		/*Tuile[][] tuiles = new Tuile[][] { { Tuile.DESERT, Tuile.MONTAGNES, Tuile.PLAINE },
-				{ Tuile.FORET, Tuile.DESERT, Tuile.PLAINE }, { Tuile.PLAINE, Tuile.MONTAGNES, Tuile.FORET } };*/
-		// J'ai mis ça en test
-		// Donc OKLM en commentaires
 		GenerateurCarte gen = new GenerateurCarte();
-		Carte carte = gen.genererCarte(10, 10);//new Carte(tuiles);
+		Carte carte = gen.genererCarte(10, 10);
 
 		// Créer et afficher l'interface graphique
 		SwingUtilities.invokeLater(() -> {
