@@ -7,6 +7,14 @@ import fr.ecole3il.rodez2023.carte.elements.*;
 
 import java.util.*;
 
+/**
+ * La classe AlgorithmeAEtoile implémente l'interface AlgorithmeChemin.
+ * Elle utilise l'algorithme A* pour trouver le chemin le plus court entre deux noeuds dans un graphe.
+ * L'algorithme A* est un algorithme de recherche de chemin dans un graphe entre un noeud initial et un noeud final.
+ * Il utilise une estimation heuristique pour essayer de minimiser le nombre de pas nécessaires pour atteindre le noeud final.
+ *
+ * @param <E> Le type d'élément stocké dans les noeuds du graphe.
+ */
 public class AlgorithmeAEtoile <E> implements AlgorithmeChemin<E> {
     @Override
     public List<Noeud<E>> trouverChemin(Graphe<E> graphe, Noeud<E> depart, Noeud<E> arrivee) {

@@ -7,6 +7,12 @@ import fr.ecole3il.rodez2023.carte.elements.*;
 
 import java.util.*;
 
+/**
+ * The AlgorithmeDijkstra class implements the AlgorithmeChemin interface.
+ * It uses Dijkstra's algorithm to find the shortest path between two nodes in a graph.
+ *
+ * @param <E> The type of element stored in the nodes of the graph.
+ */
 public class AlgorithmeDijkstra<E> implements AlgorithmeChemin<E> {
 
     @Override
@@ -68,6 +74,13 @@ public class AlgorithmeDijkstra<E> implements AlgorithmeChemin<E> {
         }
     }
 
+    /**
+     * This method finds the node with the minimum cost that has not been visited yet.
+     *
+     * @param couts The map of nodes to their costs.
+     * @param noeudsVisites The set of nodes that have been visited.
+     * @return The node with the minimum cost that has not been visited yet.
+     */
     private Noeud<E> getNoeudMinimum(Map<Noeud<E>, Double> couts, Set<Noeud<E>> noeudsVisites) {
         Noeud<E> noeudMinimum = null;
         double minimum = Double.MAX_VALUE;
