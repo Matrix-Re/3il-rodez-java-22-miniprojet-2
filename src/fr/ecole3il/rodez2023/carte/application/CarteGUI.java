@@ -9,6 +9,7 @@ import fr.ecole3il.rodez2023.carte.elements.Chemin;
 import fr.ecole3il.rodez2023.carte.elements.Tuile;
 import fr.ecole3il.rodez2023.carte.manipulateurs.GenerateurCarte;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -16,6 +17,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * @author p.roquart
@@ -129,26 +132,12 @@ public class CarteGUI extends JFrame {
 	}
 
 	private BufferedImage getTuileImage(Tuile tuile) {
-		// Bon, j'ai pas eu le temps de faire les images
-		// mais ça marche
-		BufferedImage image = new BufferedImage(32, 32, BufferedImage.TYPE_INT_RGB);
-		Graphics2D g = image.createGraphics();
-		switch (tuile) {
-		case DESERT:
-			g.setColor(Color.YELLOW);
-			break;
-		case MONTAGNES:
-			g.setColor(Color.GRAY);
-			break;
-		case PLAINE:
-			g.setColor(Color.GREEN);
-			break;
-		case FORET:
-			g.setColor(Color.DARK_GRAY);
-			break;
+		BufferedImage image = null;
+		try {
+			image = ImageIO.read(new File("data/" + tuile + ".png"));
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		g.fillRect(0, 0, 32, 32);
-		g.dispose();
 		return image;
 	}
 
